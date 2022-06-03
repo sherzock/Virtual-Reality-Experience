@@ -7,7 +7,9 @@ public class Cube : MonoBehaviour
 {
 
     public int xSize, ySize, zSize;
-    public int roundness;
+    //public int roundness;
+    public int gridSize;
+    public float radius = 1;
 
     private Vector3[] vertices;
     private Mesh mesh;
@@ -17,47 +19,25 @@ public class Cube : MonoBehaviour
     private void Generate()
     {
         GetComponent<MeshFilter>().mesh = mesh = new Mesh();
-        mesh.name = "Procedural cube";
+        mesh.name = "Procedural sphere";
         CreateVertices();
         CreateTriangles();
-
+        CreateColliders();
 
 
     }
 
+    private void CreateColliders()
+    {
+        gameObject.AddComponent<SphereCollider>();
+    }
+
     private void SetVertex(int i, int x, int y, int z)
     {
-        Vector3 inner = vertices[i] = new Vector3(x, y, z);
+        Vector3 v = vertices[i] = new Vector3(x, y, z) * 2f / gridSize - Vector3.one;
 
-        if (x < roundness)
-        {
-            inner.x = roundness;
-        }
-        else if (x > xSize - roundness)
-        {
-            inner.x = xSize - roundness;
-        }
-
-        if (y < roundness)
-        {
-            inner.y = roundness;
-        }
-        else if (y > ySize - roundness)
-        {
-            inner.y = ySize - roundness;
-        }
-
-        if (z < roundness)
-        {
-            inner.z = roundness;
-        }
-        else if (z > zSize - roundness)
-        {
-            inner.z = zSize - roundness;
-        }
-
-        normals[i] = (vertices[i] - inner).normalized;
-        vertices[i] = inner + normals[i] * roundness;
+        normals[i] = v.normalized;
+        vertices[i] = normals[i] * radius;
         cubeUV[i] = new Color32((byte)x, (byte)y, (byte)z, 0);
     }
 
