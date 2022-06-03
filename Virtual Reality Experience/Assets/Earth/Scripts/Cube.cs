@@ -12,6 +12,7 @@ public class Cube : MonoBehaviour
     private Vector3[] vertices;
     private Mesh mesh;
     private Vector3[] normals;
+    private Color32[] cubeUV;
 
     private void Generate()
     {
@@ -57,6 +58,7 @@ public class Cube : MonoBehaviour
 
         normals[i] = (vertices[i] - inner).normalized;
         vertices[i] = inner + normals[i] * roundness;
+        cubeUV[i] = new Color32((byte)x, (byte)y, (byte)z, 0);
     }
 
     private void CreateVertices()
@@ -69,6 +71,7 @@ public class Cube : MonoBehaviour
             (ySize - 1) * (zSize - 1)) * 2;
         vertices = new Vector3[cornerVertices + edgeVertices + faceVertices];
         normals = new Vector3[vertices.Length];
+        cubeUV = new Color32[vertices.Length];
 
         int v = 0;
         for (int y = 0; y <= ySize; y++)
@@ -107,6 +110,7 @@ public class Cube : MonoBehaviour
 
         mesh.vertices = vertices;
         mesh.normals = normals;
+        mesh.colors32 = cubeUV;
     }
 
     private static int
@@ -245,10 +249,10 @@ public class Cube : MonoBehaviour
         }
         for (int i = 0; i < vertices.Length; i++)
         {
-            Gizmos.color = Color.black;
-            Gizmos.DrawSphere(vertices[i], 0.1f);
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawRay(vertices[i], normals[i]);
+            //Gizmos.color = Color.black;
+            //Gizmos.DrawSphere(vertices[i], 0.1f);
+            //Gizmos.color = Color.yellow;
+            //Gizmos.DrawRay(vertices[i], normals[i]);
         }
     }
 

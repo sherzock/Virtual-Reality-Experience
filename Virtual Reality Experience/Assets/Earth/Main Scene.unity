@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 228218011}
   - component: {fileID: 228218010}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: Rounded Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -335,7 +335,7 @@ MonoBehaviour:
   xSize: 20
   ySize: 20
   zSize: 20
-  roundness: 5
+  roundness: 10
 --- !u!23 &228218011
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -356,9 +356,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bd0bb729cb6159b4ab21c5f62cad24ee, type: 3}
-  - {fileID: 2100000, guid: d73f8afe478afde498d6b36047a52c73, type: 2}
-  - {fileID: 2100000, guid: a86f23e51babc544a8f3e240ffe9b263, type: 2}
+  - {fileID: 2100000, guid: ea22ab388eaaccb45ac613914696670d, type: 2}
+  - {fileID: 2100000, guid: 5b4586c7d69a88f49bda1dbf154242c5, type: 2}
+  - {fileID: 2100000, guid: abe294e8a90bbe54c890737ed3fe2e76, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
