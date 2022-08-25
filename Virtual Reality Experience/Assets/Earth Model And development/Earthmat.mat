@@ -11,7 +11,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: 3f91d24d9fea3444eaa37be99aec4b3e, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -81,8 +81,8 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _PowerFresnel: 2.19
-    - _ScaleFresnel: 5.9
+    - _PowerFresnel: 5.91
+    - _ScaleFresnel: 0.16
     - _ShadowIntensity: 10
     - _ShadowIntensity1: 0
     - _ShadowIntensity2: 0.96
@@ -95,4 +95,5 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RimLightEarthColor: {r: 0.34509802, g: 0.76434666, b: 1, a: 0}
   m_BuildTextureStacks: []
