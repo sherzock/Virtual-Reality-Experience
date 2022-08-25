@@ -37,15 +37,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EarthDarkSideAlbedo:
-        m_Texture: {fileID: 2800000, guid: 515fbc5e723dc9f41945c28c33911694, type: 3}
+        m_Texture: {fileID: 2800000, guid: 110c922d6989c7a418ebc1ea7e705a62, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EarthLightSideAlbedo:
-        m_Texture: {fileID: 2800000, guid: 05d050f01acaa46479031d204d8fd0c1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 56b306363a021ba47b654ac176c5f46e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LightNightAlbedo:
+        m_Texture: {fileID: 2800000, guid: 515fbc5e723dc9f41945c28c33911694, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -78,6 +82,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _LightNightIntensity: 0.798
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
