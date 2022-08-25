@@ -33,15 +33,15 @@ public class Sphere : MonoBehaviour
 
     private void OnValidate()
     {
-        if (meshRenderer == null || filter == null)
-            GenerateInitialMesh();
+        //if (meshRenderer == null || filter == null)
+        //    GenerateInitialMesh();
        
-        if (currentResolution != resolution || currentSize != size)
-            for (int i = 0; i < 6; i++)
-                SphereGenerator.UpdateSphereMesh(filter[i], resolution, size, directions[i]);
+        //if (currentResolution != resolution || currentSize != size)
+        //    for (int i = 0; i < 6; i++)
+        //        SphereGenerator.UpdateSphereMesh(filter[i], resolution, size, directions[i]);
         
-        currentSize = size;
-        currentResolution = resolution;
+        //currentSize = size;
+        //currentResolution = resolution;
     }
 
     private void GenerateInitialMesh()
