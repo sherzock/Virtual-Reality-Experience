@@ -36,6 +36,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _EarthDarkSideAlbedo:
+        m_Texture: {fileID: 2800000, guid: 515fbc5e723dc9f41945c28c33911694, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EarthLightSideAlbedo:
+        m_Texture: {fileID: 2800000, guid: 05d050f01acaa46479031d204d8fd0c1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -56,6 +64,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BumpScale: 1
@@ -69,9 +81,9 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _PowerFresnel: 4
-    - _ScaleFresnel: 8
-    - _ShadowIntensity: 0.19
+    - _PowerFresnel: 2.19
+    - _ScaleFresnel: 5.9
+    - _ShadowIntensity: 10
     - _ShadowIntensity1: 0
     - _ShadowIntensity2: 0.96
     - _SmoothnessTextureChannel: 0
