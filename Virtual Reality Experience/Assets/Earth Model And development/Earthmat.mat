@@ -72,6 +72,7 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
+    - _DarkSideFresnelIntensity: 0.334
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
