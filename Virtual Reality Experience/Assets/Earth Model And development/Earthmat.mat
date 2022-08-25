@@ -44,6 +44,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 56b306363a021ba47b654ac176c5f46e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _EarthNormal:
+        m_Texture: {fileID: 2800000, guid: 87631ba0685ab0b44897533192507676, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -54,6 +58,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMapSea:
+        m_Texture: {fileID: 2800000, guid: 96253b90220f19c4cb72817cc6fa5ee8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -85,6 +93,7 @@ Material:
     - _LightNightIntensity: 4.3
     - _Metallic: 0
     - _Mode: 0
+    - _NormalIntensity: 5
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _PowerFresnel: 5.91
@@ -92,7 +101,10 @@ Material:
     - _ShadowIntensity: 10
     - _ShadowIntensity1: 0
     - _ShadowIntensity2: 0.96
+    - _Smoothness: 0
+    - _SmoothnessLand: 0.223
     - _SmoothnessTextureChannel: 0
+    - _SmoothnessWater: 0.658
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
