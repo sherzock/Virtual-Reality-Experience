@@ -84,29 +84,29 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _DarkSideFresnelIntensity: 0.334
+    - _DarkSideFresnelIntensity: -6.18
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _LightNightIntensity: 4.3
+    - _LightNightIntensity: 23.6
     - _Metallic: 0
     - _Mode: 0
-    - _NormalIntensity: 5
+    - _NormalIntensity: 4.53
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _PowerFresnel: 5.91
-    - _ScaleFresnel: 0.16
-    - _ShadowIntensity: 10
+    - _PowerFresnel: 7.15
+    - _ScaleFresnel: 10
+    - _ShadowIntensity: 0.05
     - _ShadowIntensity1: 0
     - _ShadowIntensity2: 0.96
     - _Smoothness: 0
-    - _SmoothnessLand: 0.223
+    - _SmoothnessLand: 1
     - _SmoothnessTextureChannel: 0
-    - _SmoothnessWater: 0.658
+    - _SmoothnessWater: 0.695
     - _SpecularHighlights: 1
-    - _SpeedRotationEarth: 0.04
+    - _SpeedRotationEarth: 0.099
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
@@ -114,5 +114,5 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimLightEarthColor: {r: 0.34509802, g: 0.76434666, b: 1, a: 0}
+    - _RimLightEarthColor: {r: 0, g: 0.23914179, b: 0.3018868, a: 0}
   m_BuildTextureStacks: []
