@@ -57,7 +57,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _LightNightAlbedo:
-        m_Texture: {fileID: 2800000, guid: 515fbc5e723dc9f41945c28c33911694, type: 3}
+        m_Texture: {fileID: 2800000, guid: d87c495f1263abc41999eb2bbb2318bc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -91,22 +91,23 @@ Material:
     m_Ints: []
     m_Floats:
     - _BumpScale: 1
+    - _CloudIntensity: 0.08
     - _Cutoff: 0.5
-    - _DarkSideCloudIntensity: -5.3
-    - _DarkSideFresnelIntensity: -6.18
+    - _DarkSideCloudIntensity: -1.9
+    - _DarkSideFresnelIntensity: -2.53
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _LightNightIntensity: 23.6
+    - _LightNightIntensity: 9.7
     - _Metallic: 0
     - _Mode: 0
     - _NormalIntensity: 4.53
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _PowerFresnel: 7.15
-    - _ScaleFresnel: 10
+    - _PowerFresnel: 6.05
+    - _ScaleFresnel: 9.31
     - _ShadowIntensity: 0.05
     - _ShadowIntensity1: 0
     - _ShadowIntensity2: 0.96
@@ -123,5 +124,5 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimLightEarthColor: {r: 0, g: 0.23914179, b: 0.3018868, a: 0}
+    - _RimLightEarthColor: {r: 0.07756318, g: 0.17306384, b: 0.1981132, a: 0}
   m_BuildTextureStacks: []
