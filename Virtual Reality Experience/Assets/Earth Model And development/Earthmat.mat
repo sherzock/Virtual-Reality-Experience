@@ -91,10 +91,10 @@ Material:
     m_Ints: []
     m_Floats:
     - _BumpScale: 1
-    - _CloudIntensity: 0.08
+    - _CloudIntensity: 0.32
     - _CloudSpeed: 0.06
     - _Cutoff: 0.5
-    - _DarkSideCloudIntensity: -1.9
+    - _DarkSideCloudIntensity: -2.9
     - _DarkSideFresnelIntensity: -2.53
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
