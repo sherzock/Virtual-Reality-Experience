@@ -92,6 +92,7 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _CloudIntensity: 0.08
+    - _CloudSpeed: 0.06
     - _Cutoff: 0.5
     - _DarkSideCloudIntensity: -1.9
     - _DarkSideFresnelIntensity: -2.53
@@ -103,11 +104,11 @@ Material:
     - _LightNightIntensity: 9.7
     - _Metallic: 0
     - _Mode: 0
-    - _NormalIntensity: 4.53
+    - _NormalIntensity: 4.63
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _PowerFresnel: 6.05
-    - _ScaleFresnel: 9.31
+    - _PowerFresnel: 2.8
+    - _ScaleFresnel: 3.1
     - _ShadowIntensity: 0.05
     - _ShadowIntensity1: 0
     - _ShadowIntensity2: 0.96
@@ -116,7 +117,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SmoothnessWater: 0.695
     - _SpecularHighlights: 1
-    - _SpeedRotationEarth: 0.099
+    - _SpeedRotationEarth: 0.04
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
