@@ -111,7 +111,7 @@ Material:
     - _LightNightIntensity: 9.7
     - _Metallic: 0
     - _Mode: 0
-    - _NormalIntensity: 3.54
+    - _NormalIntensity: 1.4
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _PowerFresnel: 3.32
