@@ -49,7 +49,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EarthLightSideAlbedo:
-        m_Texture: {fileID: 2800000, guid: 56b306363a021ba47b654ac176c5f46e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4f9b586c8471d0640abeea75c0f5e878, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EarthNormal:
