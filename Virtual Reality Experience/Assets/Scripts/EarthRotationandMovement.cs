@@ -6,6 +6,7 @@ public class EarthRotationandMovement : MonoBehaviour
 {
 
     public bool IsGrabbed = false;
+    public bool CanBeGrabbed = false;
     public bool IsRotating = true;
     public float RotationSpeed = 0.1f;
 
@@ -16,19 +17,29 @@ public class EarthRotationandMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //IsGrabbed = false;
-        //IsRotating = true;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (IsRotating)
-        //    AutoRotate();
-
-        GrabRotate();
+        
+        if (IsRotating && !IsGrabbed)
+            AutoRotate();
+        
+        if(CanBeGrabbed)
+            GrabRotate();
     }
 
+    private void OnMouseOver()
+    {
+        CanBeGrabbed = true;
+    }
+
+    private void OnMouseExit()
+    {
+        CanBeGrabbed = false;
+    }
 
     private void AutoRotate()
     {
@@ -39,6 +50,7 @@ public class EarthRotationandMovement : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
+            IsGrabbed = true;
             mPosDelta = Input.mousePosition - mPrevPos;
             if(Vector3.Dot(transform.up, Vector3.up) >= 0)
             {
@@ -50,6 +62,10 @@ public class EarthRotationandMovement : MonoBehaviour
             }
 
             transform.Rotate(Camera.main.transform.right, Vector3.Dot(mPosDelta, Camera.main.transform.up), Space.World);
+        }
+        else
+        {
+            IsGrabbed = false;
         }
         mPrevPos = Input.mousePosition;
     }
