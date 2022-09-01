@@ -124,7 +124,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SmoothnessWater: 0.695
     - _SpecularHighlights: 1
-    - _SpeedRotationEarth: 0.01
+    - _SpeedRotationEarth: 0
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
