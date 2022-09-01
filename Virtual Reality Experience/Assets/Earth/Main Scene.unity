@@ -34442,6 +34442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6111790437578135791}
   - component: {fileID: 6888996331261067862}
+  - component: {fileID: 6888996331261067863}
   m_Layer: 0
   m_Name: Earth
   m_TagString: Untagged
@@ -34462,8 +34463,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsGrabbed: 0
+  CanStartGrab: 0
   IsRotating: 1
   RotationSpeed: 0.1
+--- !u!135 &6888996331261067863
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6888996331261067861}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &6891661186774925372
 Transform:
   m_ObjectHideFlags: 0
@@ -40702,6 +40717,7 @@ GameObject:
   - component: {fileID: 1151388028090133559}
   - component: {fileID: 2823090748076922237}
   - component: {fileID: 1587545475457888745}
+  - component: {fileID: 8164078559228149517}
   m_Layer: 0
   m_Name: Base Earth / Water
   m_TagString: Untagged
@@ -40709,6 +40725,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!54 &8164078559228149517
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078559228149516}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!4 &8164502966340320537
 Transform:
   m_ObjectHideFlags: 0
