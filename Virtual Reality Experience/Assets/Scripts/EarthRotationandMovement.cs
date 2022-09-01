@@ -24,15 +24,12 @@ public class EarthRotationandMovement : MonoBehaviour
     void Update()
     {
         
-        if (IsRotating && !IsGrabbed)
+        if (IsRotating)
             AutoRotate();
 
         if (CanStartGrab)
         {
-            if (Input.GetMouseButton(0))
-            {
                 IsGrabbed = true;
-            }
         }
 
         if (IsGrabbed)
@@ -51,16 +48,31 @@ public class EarthRotationandMovement : MonoBehaviour
 
     private void AutoRotate()
     {
-        this.transform.Rotate(0, RotationSpeed, 0);
+        if (Vector3.Dot(transform.up, Vector3.up) >= 0)
+        {
+            this.transform.Rotate(0, RotationSpeed, 0);
+        }
+        else
+        {
+            this.transform.Rotate(0, -RotationSpeed, 0);
+
+        }
     }
 
     private void GrabRotate()
     {
             if(Input.GetMouseButtonUp(0))
-                IsGrabbed = false;
+        {
+            IsRotating= true;
+            IsGrabbed = false;
+        }
+        
+        if (Input.GetMouseButton(0))
+        {
+            IsRotating = false;
 
             mPosDelta = Input.mousePosition - mPrevPos;
-            if(Vector3.Dot(transform.up, Vector3.up) >= 0)
+            if (Vector3.Dot(transform.up, Vector3.up) >= 0)
             {
                 transform.Rotate(transform.up, -Vector3.Dot(mPosDelta, Camera.main.transform.right), Space.World);
             }
@@ -70,7 +82,7 @@ public class EarthRotationandMovement : MonoBehaviour
             }
 
             transform.Rotate(Camera.main.transform.right, Vector3.Dot(mPosDelta, Camera.main.transform.up), Space.World);
-
+        }
             mPrevPos = Input.mousePosition;
     }
 }
