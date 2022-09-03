@@ -10,5 +10,5 @@ public class Country
     public float data1;
     public float data2;
     public GameObject capital;
-    public GameObject meshmat;
+    public GameObject meshMat;
 }
