@@ -42,8 +42,8 @@ public class CSVReader : MonoBehaviour
 
         int countriesNumber = AfricaCountries + AmericaCountries + AsiaCountries + OceaniaCountries + EuropeCountries + AntarticaCountries;
 
-        int tableSize = countriesNumber /*/ 4 - 1*/;
-        countries.country = new Country[tableSize];
+        int CountriesSize = countriesNumber /*/ 4 - 1*/;
+        countries.country = new Country[CountriesSize];
 
         for (int i = 0; i < Africa.transform.childCount; i++)
         {
@@ -98,23 +98,48 @@ public class CSVReader : MonoBehaviour
             countries.country[i + AfricaCountries + AmericaCountries + AsiaCountries + EuropeCountries + OceaniaCountries].meshMat = Antartica.transform.GetChild(i).gameObject;
 
         }
-    }
 
-    void ReadCsv()
-    {
         string[] data = CsvFile.text.Split(new string[] { ";", "\n" }, System.StringSplitOptions.None);
-
-        int tableSize = data.Length / 4 - 1;
-        countries.country = new Country[tableSize];
+        int tableSize = data.Length / 13 - 1;
 
         for (int i = 0; i < tableSize; i++)
         {
-            countries.country[i] = new Country();
-            countries.country[i].name = data[4 * (i + 1)];
-            countries.country[i].id = int.Parse(data[4 * (i + 1) + 1]);
-            countries.country[i].data1 = float.Parse(data[4 * (i + 1) + 2]);
-            countries.country[i].data2 = float.Parse(data[4 * (i + 1) + 3]);
-
+            for (int j = 0; j < CountriesSize; j++)
+            {
+                if(countries.country[j].name == data[13 * (i + 1)])
+                {
+                    countries.country[j].pop1962 = int.Parse(data[13 * (i + 1) + 1]);
+                    countries.country[j].pop1972 = int.Parse(data[13 * (i + 1) + 3]);
+                    countries.country[j].pop1967 = int.Parse(data[13 * (i + 1) + 2]);
+                    countries.country[j].pop1977 = int.Parse(data[13 * (i + 1) + 4]);
+                    countries.country[j].pop1982 = int.Parse(data[13 * (i + 1) + 5]);
+                    countries.country[j].pop1987 = int.Parse(data[13 * (i + 1) + 6]);
+                    countries.country[j].pop1992 = int.Parse(data[13 * (i + 1) + 7]);
+                    countries.country[j].pop1997 = int.Parse(data[13 * (i + 1) + 8]);
+                    countries.country[j].pop2002 = int.Parse(data[13 * (i + 1) + 9]);
+                    countries.country[j].pop2007 = int.Parse(data[13 * (i + 1) + 10]);
+                    countries.country[j].pop2012 = int.Parse(data[13 * (i + 1) + 11]);
+                    countries.country[j].pop2017 = int.Parse(data[13 * (i + 1) + 12]);
+                }
+            }
         }
+
     }
+
+    //void ReadCsv()
+    //{
+    //    string[] data = CsvFile.text.Split(new string[] { ";", "\n" }, System.StringSplitOptions.None);
+
+    //    int tableSize = data.Length / 13 - 1;
+
+    //    for (int i = 0; i < tableSize; i++)
+    //    {
+    //        countries.country[i] = new Country();
+    //        countries.country[i].name = data[4 * (i + 1)];
+    //        countries.country[i].id = int.Parse(data[4 * (i + 1) + 1]);
+    //        countries.country[i].data1 = float.Parse(data[4 * (i + 1) + 2]);
+    //        countries.country[i].data2 = float.Parse(data[4 * (i + 1) + 3]);
+
+    //    }
+    //}
 }
