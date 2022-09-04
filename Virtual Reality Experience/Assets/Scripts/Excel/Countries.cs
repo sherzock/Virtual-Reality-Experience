@@ -7,19 +7,8 @@ public class Country
 {
     public string name;
 
-    //Population Data
-    public int pop1962;
-    public int pop1967;
-    public int pop1972;
-    public int pop1977;
-    public int pop1982;
-    public int pop1987;
-    public int pop1992;
-    public int pop1997;
-    public int pop2002;
-    public int pop2007;
-    public int pop2012;
-    public int pop2017;
+    // 1962/1967/1972/1977/1982/1987/1992/1997/2002/2007/2012/2017
+    public int[] NetMigration = new int[11];
 
     public GameObject capital;
     public GameObject meshMat;
