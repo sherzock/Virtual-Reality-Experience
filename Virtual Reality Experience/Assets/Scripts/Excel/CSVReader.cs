@@ -13,12 +13,18 @@ public class CSVReader : MonoBehaviour
     public GameObject America;
     public GameObject Europe;
     public GameObject Oceania;
+    public int CountriesSize;
+    public int tableSize;
 
 
-    [System.Serializable]
+   [System.Serializable]
     public class Countries
     {
         public Country[] country;
+
+        public int [] NetMigrationMax = new int[11];
+        public int [] NetMigrationMin = new int[11];
+        public int [] NetMigrationLimits = new int[11];
     }
 
     public Countries countries = new Countries();
@@ -28,6 +34,8 @@ public class CSVReader : MonoBehaviour
     {
         //ReadCsv();
         CreateCountries();
+        CreateColorToCountry();
+        ApplyColorCountry();
     }
     
     void CreateCountries()
@@ -42,7 +50,7 @@ public class CSVReader : MonoBehaviour
 
         int countriesNumber = AfricaCountries + AmericaCountries + AsiaCountries + OceaniaCountries + EuropeCountries + AntarticaCountries;
 
-        int CountriesSize = countriesNumber /*/ 4 - 1*/;
+        CountriesSize = countriesNumber /*/ 4 - 1*/;
         countries.country = new Country[CountriesSize];
 
         for (int i = 0; i < Africa.transform.childCount; i++)
@@ -100,7 +108,7 @@ public class CSVReader : MonoBehaviour
         }
 
         string[] data = CsvFile.text.Split(new string[] { ";", "\n" }, System.StringSplitOptions.None);
-        int tableSize = data.Length / 13 - 1;
+        tableSize = data.Length / 13 - 1;
 
         for (int i = 0; i < tableSize; i++)
         {
@@ -112,11 +120,46 @@ public class CSVReader : MonoBehaviour
                     for(int k = 0; k < 11; k++)
                     {
                         countries.country[j].NetMigration[k] = int.Parse(data[13 * (i + 1) + k + 1]);
+                        if (countries.NetMigrationMin[k] > int.Parse(data[13 * (i + 1) + k + 1]))
+                            countries.NetMigrationMin[k] = int.Parse(data[13 * (i + 1) + k + 1]);
+                        if (countries.NetMigrationMax[k] < int.Parse(data[13 * (i + 1) + k + 1]))
+                            countries.NetMigrationMax[k] = int.Parse(data[13 * (i + 1) + k + 1]);
                     }
                 }
             }
         }
 
+
+
     }
 
+    void CreateColorToCountry()
+    {
+
+        for (int i = 0; i < CountriesSize; i++)
+        {
+            for (int j = 0; j < 11; j++)
+            {
+                countries.country[i].NetMigrationColor[j] = ReScaleValue(countries.NetMigrationMin[j], countries.NetMigrationMax[j], 0f, 1f, countries.country[i].NetMigration[j]);                
+            }
+        }
+    }
+
+    void ApplyColorCountry()
+    {
+        for(int i = 0; i < CountriesSize; i++)
+        {
+            countries.country[i].meshMat.GetComponent<MeshRenderer>().material.color = Color.Lerp(Color.red, Color.green, countries.country[i].NetMigrationColor[0]);
+        }
+    }
+
+    public float ReScaleValue(float OldMin, float OldMax, float NewMin, float NewMax, float OldValue)
+    {
+
+        float OldRange = (OldMax - OldMin);
+        float NewRange = (NewMax - NewMin);
+        float NewValue = (((OldValue - OldMin) * NewRange) / OldRange) + NewMin;
+
+        return (NewValue);
+    }
 }
