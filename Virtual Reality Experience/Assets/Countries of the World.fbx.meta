@@ -3,7 +3,72 @@ guid: d5c357eb882081544bde37df8d0e08e2
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_01.1
+    second: {fileID: 2100000, guid: d4868c87ecadabf4a954ed0598e02359, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_02.1
+    second: {fileID: 2100000, guid: b62a827ac8d0e0540be683862e8881c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_03.1
+    second: {fileID: 2100000, guid: 46d4f0aad0cb1ca4c8d44e4a9f5275d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_04.1
+    second: {fileID: 2100000, guid: 322f169d8828720408860b18ea26750c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_05.1
+    second: {fileID: 2100000, guid: 4962dc7bf1d5dd3419bf0f43c571dfd6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_06.1
+    second: {fileID: 2100000, guid: 75c0bbfd38c20f0449c4c132ebee5910, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_07.1
+    second: {fileID: 2100000, guid: 3c696e9c2f03aa744a8f6943c8584d2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_08.1
+    second: {fileID: 2100000, guid: 0c1b7ce53494c0a44bd60b219957c10c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_09.1
+    second: {fileID: 2100000, guid: 4b5dc63f4dc18d9438b33c4103806081, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_10.1
+    second: {fileID: 2100000, guid: 5d3016debb9ab8e40a3995473302226a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_11.1
+    second: {fileID: 2100000, guid: 649df1e95762a4743bfae0216a95365d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_12.1
+    second: {fileID: 2100000, guid: 4161561bfa2d9c04cb5ccf9a77e71dcd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: water
+    second: {fileID: 2100000, guid: a69d65612e6ef4c4c9121558def4ee85, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
