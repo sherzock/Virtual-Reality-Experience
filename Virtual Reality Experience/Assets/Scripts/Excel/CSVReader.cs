@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CSVReader : MonoBehaviour
@@ -15,6 +13,8 @@ public class CSVReader : MonoBehaviour
     public GameObject Oceania;
     public int CountriesSize;
     public int tableSize;
+
+    string lastSelectedCountry = "";
 
 
    [System.Serializable]
@@ -161,5 +161,35 @@ public class CSVReader : MonoBehaviour
         float NewValue = (((OldValue - OldMin) * NewRange) / OldRange) + NewMin;
 
         return (NewValue);
+    }
+
+    public void NewSelectedCountry(string NewCountryName)
+    {
+
+        for(int i = 0; i < CountriesSize; i++)
+        {
+            if (countries.country[i].name == lastSelectedCountry)
+                DeSelectCountry(countries.country[i]);
+        }
+
+        for (int i = 0; i < CountriesSize; i++)
+        {
+            if (countries.country[i].name == NewCountryName)
+                SelectCountry(countries.country[i]);
+        }
+
+    }
+
+    void DeSelectCountry(Country country)
+    {
+        country.meshMat.GetComponent<Outline>().enabled = false;
+        country.meshMat.GetComponent<SelectedCountry>().enabled = false;
+
+    }
+
+    void SelectCountry(Country country)
+    {
+        country.meshMat.GetComponent<Outline>().enabled = true;
+        lastSelectedCountry = country.name;
     }
 }
