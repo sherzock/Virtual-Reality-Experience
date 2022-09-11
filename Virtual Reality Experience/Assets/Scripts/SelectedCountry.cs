@@ -6,9 +6,14 @@ public class SelectedCountry : MonoBehaviour
 {
 
     public CSVReader reader;
+    public GameObject canvas;
 
     private void OnEnable()
     {
+
+        if(canvas.activeSelf == false)
+            canvas.SetActive(true);
+
         string countryName = transform.gameObject.name;
         reader.NewSelectedCountry(countryName);
     }

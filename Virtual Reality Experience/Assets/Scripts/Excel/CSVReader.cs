@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class CSVReader : MonoBehaviour
 {
@@ -14,10 +15,15 @@ public class CSVReader : MonoBehaviour
     public int CountriesSize;
     public int tableSize;
 
-    string lastSelectedCountry = "";
+    public string lastSelectedCountry = "";
+    //public GameObject countryName;
+    //public GameObject countryInfo;
+    public TMPro.TextMeshProUGUI countryName;
+    public TMPro.TextMeshProUGUI countryInfo;
 
 
-   [System.Serializable]
+
+    [System.Serializable]
     public class Countries
     {
         public Country[] country;
@@ -178,6 +184,18 @@ public class CSVReader : MonoBehaviour
                 SelectCountry(countries.country[i]);
         }
 
+        countryName.text = NewCountryName;
+        for (int i = 0; i < CountriesSize; i++)
+        {
+            if (countries.country[i].name == NewCountryName)
+            {
+                countryInfo.text = "Country Net Migration by year:" + "\n";
+
+                for (int j = 0; j < 11; j++)
+                countryInfo.text = countryInfo.text + "\n" + (1962+5*j)+ ": " + countries.country[i].NetMigration[j];
+            }
+        }
+
     }
 
     void DeSelectCountry(Country country)
@@ -192,4 +210,6 @@ public class CSVReader : MonoBehaviour
         country.meshMat.GetComponent<Outline>().enabled = true;
         lastSelectedCountry = country.name;
     }
+
+    
 }
