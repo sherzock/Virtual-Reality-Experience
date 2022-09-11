@@ -19,7 +19,12 @@ public class CSVReader : MonoBehaviour
     //public GameObject countryName;
     //public GameObject countryInfo;
     public TMPro.TextMeshProUGUI countryName;
-    public TMPro.TextMeshProUGUI countryInfo;
+    //public TMPro.TextMeshProUGUI countryInfo;
+    public GameObject yearDataParent;
+    public GameObject infoDataParent;
+    public GameObject yearData;
+    public GameObject infoData;
+
 
 
 
@@ -189,10 +194,39 @@ public class CSVReader : MonoBehaviour
         {
             if (countries.country[i].name == NewCountryName)
             {
-                countryInfo.text = "Country Net Migration by year:" + "\n";
+                //countryInfo.text = "Country Net Migration by year:" + "\n";
+                for (int j = 0; j < infoDataParent.transform.childCount; j++)
+                {
+                    Destroy(infoDataParent.transform.GetChild(j).gameObject);
+                }
+                for (int j = 0; j < yearDataParent.transform.childCount; j++)
+                {
+                    Destroy(yearDataParent.transform.GetChild(j).gameObject);
+                }
+                //while(infoDataParent.transform.childCount > 0)
+                //{
+                //    Destroy(infoDataParent.transform.GetChild(0).gameObject);
+                //}
+                //while (yearDataParent.transform.childCount > 0)
+                //{
+                //    Destroy(yearDataParent.transform.GetChild(0).gameObject);
+                //}
+
+                Instantiate(infoData, infoDataParent.transform);
+                Instantiate(yearData, yearDataParent.transform);
 
                 for (int j = 0; j < 11; j++)
-                countryInfo.text = countryInfo.text + "\n" + (1962+5*j)+ ": " + countries.country[i].NetMigration[j];
+                {
+                    GameObject newData = Instantiate(infoData, infoDataParent.transform);
+                    GameObject newYear = Instantiate(yearData, yearDataParent.transform);
+                    newData.GetComponent<TMPro.TextMeshProUGUI>().color = Color.Lerp(Color.red, Color.green, countries.country[i].NetMigrationColor[j]);
+                    newData.name = "" + countries.country[i].NetMigration[j];
+                    newData.GetComponent<TMPro.TextMeshProUGUI>().text = "" + countries.country[i].NetMigration[j];
+                    newYear.name = "" + (1962 + 5 * j);
+                    newYear.GetComponent<TMPro.TextMeshProUGUI>().text = "" + (1962 + 5 * j);
+                    //countryInfo.color = Color.Lerp(Color.red, Color.green, countries.country[i].NetMigrationColor[j]);
+                    //countryInfo.text = countryInfo.text + "\n" + (1962+5*j)+ ": " + countries.country[i].NetMigration[j];
+                }
             }
         }
 
