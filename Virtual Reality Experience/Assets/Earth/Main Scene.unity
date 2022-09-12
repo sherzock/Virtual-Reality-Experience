@@ -1841,6 +1841,7 @@ GameObject:
   - component: {fileID: 1034558955}
   - component: {fileID: 1034558957}
   - component: {fileID: 1034558956}
+  - component: {fileID: 1034558958}
   m_Layer: 5
   m_Name: Data Visualization Checkbox
   m_TagString: Untagged
@@ -1936,8 +1937,36 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1034558958}
+        m_TargetAssemblyTypeName: DatavisButton, Assembly-CSharp
+        m_MethodName: TriggerButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
+--- !u!114 &1034558958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034558954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a18e434da18fbf840baa3f47096f5636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  earth: {fileID: 8164078559228149516}
+  countries: {fileID: 2442030066551531325}
+  earthMat: {fileID: 2100000, guid: 17f445147b072554785ee8753d8263f7, type: 2}
+  waterMat: {fileID: 2100000, guid: a69d65612e6ef4c4c9121558def4ee85, type: 2}
 --- !u!1 &1091470464
 GameObject:
   m_ObjectHideFlags: 0
@@ -8754,7 +8783,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a69d65612e6ef4c4c9121558def4ee85, type: 2}
+  - {fileID: 2100000, guid: 17f445147b072554785ee8753d8263f7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11247,7 +11276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2453948788497481816
 Transform:
   m_ObjectHideFlags: 0

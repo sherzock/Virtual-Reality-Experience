@@ -98,7 +98,7 @@ Material:
     - _CloudIntensity: 1.87
     - _CloudNormalIntensity: 3.95
     - _CloudSmoothnessIntensity: 0
-    - _CloudSpeed: 0.02
+    - _CloudSpeed: 0.01
     - _Cutoff: 0.5
     - _DarkSideCloudIntensity: 20.7
     - _DarkSideFresnelIntensity: -2.77
