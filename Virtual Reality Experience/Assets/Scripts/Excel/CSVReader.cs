@@ -46,7 +46,7 @@ public class CSVReader : MonoBehaviour
         //ReadCsv();
         CreateCountries();
         CreateColorToCountry();
-        ApplyColorCountry();
+        ApplyColorCountry(0);
     }
     
     void CreateCountries()
@@ -156,11 +156,11 @@ public class CSVReader : MonoBehaviour
         }
     }
 
-    void ApplyColorCountry()
+    public void ApplyColorCountry(int yearArrayPos)
     {
         for(int i = 0; i < CountriesSize; i++)
         {
-            countries.country[i].meshMat.GetComponent<MeshRenderer>().material.color = Color.Lerp(Color.red, Color.green, countries.country[i].NetMigrationColor[0]);
+            countries.country[i].meshMat.GetComponent<MeshRenderer>().material.color = Color.Lerp(Color.red, Color.green, countries.country[i].NetMigrationColor[yearArrayPos]);
         }
     }
 
