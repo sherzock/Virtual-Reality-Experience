@@ -24,7 +24,7 @@ public class CreditsButton : MonoBehaviour
     public void ChangeMenu()
     {
         Menu1.SetActive(false);
-        Menu2New.SetActive(false);
+        Menu2New.SetActive(true);
         Menu1New.SetActive(true);
 
     }

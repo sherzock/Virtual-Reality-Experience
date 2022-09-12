@@ -22,7 +22,8 @@ public class StartButton : MonoBehaviour
 
     public void StartExperience()
     {
-        MainMenu.SetActive(false);
         InfoMenu.SetActive(true);
+        Earth.SetActive(true);
+        MainMenu.SetActive(false);
     }
 }
