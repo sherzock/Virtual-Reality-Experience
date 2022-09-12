@@ -50,11 +50,11 @@ public class EarthRotationandMovement : MonoBehaviour
     {
         if (Vector3.Dot(transform.up, Vector3.up) >= 0)
         {
-            this.transform.Rotate(0, RotationSpeed, 0);
+            this.transform.Rotate(0, RotationSpeed * Time.deltaTime, 0);
         }
         else
         {
-            this.transform.Rotate(0, -RotationSpeed, 0);
+            this.transform.Rotate(0, -RotationSpeed * Time.deltaTime, 0);
 
         }
     }
