@@ -22,9 +22,15 @@ public class RotSpeedSlider : MonoBehaviour
         
     }
 
-    public void SpeedChange()
+    public void AutoSpeedChange()
     {
-        earthMov.RotationSpeed = slid.value ;
-        speedtext.text = "" + slid.value ;
+        earthMov.AutopRotationSpeed = slid.value ;
+        speedtext.text = "Default: " + slid.value ;
+    }
+
+    public void ManualSpeedChange()
+    {
+        earthMov.GrabRotationSpeed = slid.value;
+        speedtext.text = "Manual: " + slid.value;
     }
 }
