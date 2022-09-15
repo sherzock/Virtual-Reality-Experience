@@ -26,7 +26,7 @@ public class VolumeMixerSlider : MonoBehaviour
 
     public void VolumeSet()
     {
-        audio.SetFloat("AudioVol", slid.value/*Mathf.Log10(slid.value) * 20*/ );
+        audio.SetFloat("AudioVol", Mathf.Log10(slid.value) * 20 );
         voltext.text = (int)slid.value * 100 + "%";
     }
 }
