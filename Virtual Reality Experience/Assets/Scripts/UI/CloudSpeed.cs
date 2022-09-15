@@ -24,8 +24,8 @@ public class CloudSpeed : MonoBehaviour
 
     public void ChangeSpeed()
     {
-        earthMat.SetFloat("CloudSpeed", slid.value);
-        float textval = Mathf.Round(slid.value * 100.0f) * 0.01f;
+        earthMat.SetFloat("_CloudSpeed", slid.value);
+        float textval = slid.value;
         speedtext.text = "" + textval;
     }
 }
