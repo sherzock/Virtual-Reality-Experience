@@ -8,6 +8,8 @@ public class YearSlider : MonoBehaviour
 
     public CSVReader reader;
     public GameObject yearText;
+    public TMPro.TextMeshProUGUI yearMax;
+    public TMPro.TextMeshProUGUI yearMin;
     public Slider slid;
 
     // Start is called before the first frame update
@@ -34,5 +36,8 @@ public class YearSlider : MonoBehaviour
         yearText.GetComponent<TMPro.TextMeshProUGUI>().text = "Year: " + year;
         int yearArrayValue = (year - 1962) / 5;
         reader.ApplyColorCountry(yearArrayValue);
+        yearMax.text = "" + reader.countries.NetMigrationMax[yearArrayValue];
+        yearMin.text = "" + reader.countries.NetMigrationMin[yearArrayValue];
+
     }
 }

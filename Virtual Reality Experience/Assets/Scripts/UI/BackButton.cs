@@ -9,6 +9,7 @@ public class BackButton : MonoBehaviour
     public GameObject Menu2;
     public GameObject Menu1New;
     public GameObject Menu2New;
+    public GameObject Menu3New;
 
     // Start is called before the first frame update
     void Start()
@@ -28,5 +29,6 @@ public class BackButton : MonoBehaviour
         Menu2.SetActive(false);
         Menu1New.SetActive(true);
         Menu2New.SetActive(true);
+        Menu3New.SetActive(true);
     }
 }

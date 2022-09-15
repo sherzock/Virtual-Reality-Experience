@@ -6,6 +6,7 @@ public class SettingsButton : MonoBehaviour
 {
     public GameObject Menu1;
     public GameObject Menu2;
+    public GameObject Menu3;
     public GameObject Menu1New;
     public GameObject Menu2New;
 
@@ -25,6 +26,7 @@ public class SettingsButton : MonoBehaviour
     {
         Menu1.SetActive(false);
         Menu2.SetActive(false);
+        Menu3.SetActive(false);
         Menu1New.SetActive(true);
         Menu2New.SetActive(true);
     }
